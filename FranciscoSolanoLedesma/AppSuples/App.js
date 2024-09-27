@@ -13,7 +13,7 @@ export default function App() {
       </View>
 
       <View style={styles.footerContainer}>
-        <Button label="Choose a photo" />
+        <Button label="Elige una foto" />
         <Button label="Use this photo" />
       </View>
       <StatusBar style="auto" />
