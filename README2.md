@@ -71,7 +71,8 @@ Utiliza Expo Go en tu dispositivo móvil para probar tu aplicación en tiempo re
 Cuando tu aplicación esté lista, puedes utilizar Expo para compilarla y publicarla en la App Store (iOS) y Google Play Store (Android). Expo proporciona herramientas para facilitar este proceso.
 
 Estos son los pasos básicos para crear una aplicación desde cero utilizando Expo. A medida que avances en tu desarrollo, puedes consultar la documentación de Expo y la de React Native para obtener más información y recursos específicos sobre el desarrollo de aplicaciones móviles.
-
+Documentación para desarrollar
+https://docs.expo.dev/tutorial/overview/
 ## Componentes
 
 ### View
