@@ -9,11 +9,11 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
       <Image source={PlaceholderImage} style={styles.image}/>
-      <Text style={styles.infoText}> Bienvenidos a la aplicacion movil</Text>
+      <Text style={styles.infoText}> Bienvenidos a la aplicacion movil.</Text>
       </View>
       <StatusBar style="auto" />
       <Pressable style={styles.button}>
-      <Text style={styles.text}>Presiona aqui</Text>
+      <Text style={styles.text}>Presiona aqui.</Text>
     </Pressable>
     </View>
   );
