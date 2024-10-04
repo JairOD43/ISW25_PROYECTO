@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 3,
-    marginBottom: 60,
   },
   button: {
     borderRadius: 10,
@@ -27,8 +26,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    backgroundColor: '#003eff',
-    
   },
   buttonIcon: {
     paddingRight: 8,
