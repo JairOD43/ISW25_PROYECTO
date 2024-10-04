@@ -1,20 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import {Pressable, StyleSheet, View, Image, Text } from 'react-native';
+import {StyleSheet, View, Text, TextInput, Button, TouchableOpacity,ImageBackground } from 'react-native';
 
 
-const PlaceholderImage = require('./assets/images/background-image.png');
+const PlaceholderImage = require('./assets/images/fondito.jpg');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-      <Image source={PlaceholderImage} style={styles.image}/>
-      <Text style={styles.infoText}> Bienvenidos a la aplicacion movil.</Text>
-      </View>
+      <ImageBackground source={PlaceholderImage} style={styles.image}>
       <StatusBar style="auto" />
-      <Pressable style={styles.button}>
-      <Text style={styles.text}>Presiona aqui.</Text>
-    </Pressable>
+      <View style={styles.imageContainer}>
+      <Text style={styles.title}>Welcome</Text>
+      <Text style={styles.subtitle}>Iniciar sesion en tu cuenta</Text>
+      <TextInput placeholder='Nombre' style={styles.textInput}></TextInput>
+      <TextInput placeholder='Apellido' style={styles.textInput}></TextInput>
+      <TextInput placeholder='Telefono' style={styles.textInput}></TextInput>
+      <Button
+      onPress={()=>console.log('Mi mensaje uno')}
+      title='boton 1'/>
+      <TouchableOpacity onPress={() => console.log("Mi mensaje dos")}>
+        <Text 
+        style={{
+          padding:10,
+          color:'white',
+          fontSize:30,
+          backgroundColor:'gray',
+          }}>Boton 2</Text>
+      </TouchableOpacity>
+      <Button
+      onPress={()=>console.log('Mi mensaje uno')}
+      title='Registrar'/>
+      </View>
+      </ImageBackground>
     </View>
   );
 }
@@ -22,40 +39,35 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    flexDirection:'column',
+    backgroundColor: '#fff',
     alignItems: 'center',
-  },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
+    justifyContent: "center",
   },
   image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
-  },
-  button: {
-    alignItems: 'center',
+    flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
-    paddingVertical: 20,
-    paddingHorizontal: 80,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'blue',
   },
-  text: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
+  title:
+  {
+    fontSize:80,
+    color:'#000',
+    fontWeight:'bold',
   },
-  infoText:{
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    textAlign: 'center',
-    color: 'white',
+  subtitle:
+  {
+    fontSize:20,
+    color:'gray',
+    fontWeight:'condensedBold',
   },
+  textInput:{
+    padding:10,
+    paddingStart:30,
+    width:'80%',
+    height:50,
+    marginTop:20,
+    borderRadius:30,
+    backgroundColor:'#fff'
+  }
 });
