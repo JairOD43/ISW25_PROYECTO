@@ -1,0 +1,1 @@
+//mismo encabezado en todas las ventanas

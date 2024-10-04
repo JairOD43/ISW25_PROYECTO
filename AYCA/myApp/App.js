@@ -1,32 +1,61 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image } from 'react-native';
-
-const PlaceholderImage = require('./assets/images/background-image.png');
+import { StatusBar } from "expo-status-bar";
+import {
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
-      </View>
+      <Text style={styles.title}>WELCOME</Text>
+      <Text style={styles.subtitle}>Sign in to your account</Text>
+      <TextInput placeholder="aaa@xxx.com" style={styles.textInput} />
+      <TextInput placeholder="password" style={styles.textInput} />
+      <Button onPress={() => console.log("Mi mensaje uno")} title="boton 1" />
       <StatusBar style="auto" />
+      <TouchableOpacity onPress={() => console.log("Mi mensaje dos")}>
+        <Text
+          style={{
+            padding: 10,
+            color: "white",
+            fontSize: 30,
+            backgroundColor: "gray",
+          }}
+        >
+          Boyon 2
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
-    alignItems: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
+  title: {
+    fontSize: 80,
+    color: "#000",
+    fontWeight: "bold",
   },
-  image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
+  subtitle: {
+    fontSize: 20,
+    color: "gray",
+    fontWeight: "condensedBold",
+  },
+  textInput: {
+    padding: 10,
+    paddingStart: 30,
+    width: "80%",
+    height: 50,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: "#fff",
   },
 });

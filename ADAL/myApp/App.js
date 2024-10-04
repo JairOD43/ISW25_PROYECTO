@@ -1,28 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image, Pressable, Text } from 'react-native';
+import { StyleSheet, View, Pressable, Text, TextInput, ImageBackground } from 'react-native';
+import React from 'react';
 
-const PlaceholderImage = require('./assets/images/background-image.png');
+const image = { uri: 'https://images.pexels.com/photos/3117226/pexels-photo-3117226.jpeg?cs=srgb&dl=pexels-pixworthmedia-3117226.jpg&fm=jpg' };
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
-      </View>
-      <StatusBar style="auto" />
-      
-      {/* Aquí renderizamos el componente Button */}
-      <Button label="Press Me" />
-    </View>
-  );
-}
+      <ImageBackground source={image} style={styles.imageBackground}>
+        <Text style={styles.title}>WELCOME</Text>
+        <Text style={styles.subtitle}>Sign in to your account</Text>
+        <TextInput style={styles.TextInput} placeholder='Nombre y Apellido' placeholderTextColor="#aaa"></TextInput>
+        <TextInput style={styles.TextInput} placeholder='Telefono' placeholderTextColor="#aaa"></TextInput>
 
-function Button({ label }) {
-  return (
-    <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-        <Text style={styles.buttonLabel}>{label}</Text>
-      </Pressable>
+        <Pressable style={styles.button} onPress={() => console.log("Mensaje numero uno")}>
+          <Text style={styles.buttonText}>Registrar</Text>
+        </Pressable>
+      </ImageBackground>
+
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -31,36 +27,42 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#25292e',
-    alignItems: 'center',
   },
-  imageContainer: {
+  imageBackground: {
     flex: 1,
-    paddingTop: 58,
-  },
-  image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
-  },
-  buttonContainer: {
-    width: 320,
-    height: 68,
-    marginHorizontal: 20,
-    alignItems: 'center',
     justifyContent: 'center',
-    padding: 3,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 50,
+    marginTop: 50,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  subtitle: {
+    color: "white",
+    marginTop: 30,
+  },
+  TextInput: {
+    borderWidth: 1,
+    borderColor: "grey",
+    color: "white",
+    padding: 10,
+    width: "80%",
+    height: 50,
+    marginTop: 20,
+    borderRadius: 30,
   },
   button: {
-    borderRadius: 10,
-    width: '100%',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    backgroundColor: '#1E90FF',  
+    marginTop: 20,
+    backgroundColor: '#1E90FF',
+    paddingVertical: 15,
+    paddingHorizontal: 60,
+    borderRadius: 30,
   },
-  buttonLabel: {
-    color: '#fff',
+  buttonText: {
+    color: 'white',
     fontSize: 16,
-  },
+    fontWeight: 'bold',
+  }
 });
