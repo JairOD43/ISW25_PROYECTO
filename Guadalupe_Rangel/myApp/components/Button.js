@@ -27,9 +27,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
   },
-  buttonIcon: {
-    paddingRight: 8,
-  },
   buttonLabel: {
     color: '#fff',
     fontSize: 16,
