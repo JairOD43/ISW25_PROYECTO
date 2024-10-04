@@ -25,7 +25,7 @@ export default function App()
     </ImageBackground>
   );
 }
-
+//Nose que hice ayudaaaaaaaa
 const styles = StyleSheet.create({
   container: 
   {
