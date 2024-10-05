@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image} from 'react-native';
-import Button from "./components/Button"
+import { 
+  Button,
+  StyleSheet,
+  Text, 
+  TextInput, 
+  TouchableOpacity, 
+  View,
+} from 'react-native';
 
-const PlaceholderImage = require('./assets/panda.jpg');
+import Wrapper from './components/layout/wrapper';
+import Header from './components/layout/Header';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
-      </View>
-      <View>
-        <Button label="Dame click"></Button>
-      </View>
-      <StatusBar style="auto" />
-    </View>
+  return(
+    <Wrapper>
+      <Header/>
+        <View style = {styles.container}>
+          <Text>Sin etiqueta</Text>
+        </View>
+    </Wrapper>
   );
 }
 
@@ -22,16 +25,39 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#fff',
+  },
+  title:
+  {
+    fontSize: 75,
+    color: '#000',
+    fontWeight: "bold"
+  },
+  subtitle:
+  {
+    fontSize: 20,
+    color: '#003eff',
+    fontWeight: "condensedBold"
+  },
+  textInput:
+  {
+    borderWidth: 2,
+    borderColor: 'gray',
+    padding: 10,
+    width: "80%",
+    borderRadius: 20,
+    marginTop: 25,
+    height: 60,
+    paddingStart: 30,
+    backgroundColor: '#dbdcdf'
+  },
+  bgimage:
+  {
+    width: '100%',
+    height: ' 100%',
     alignItems: 'center',
-  },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
-  },
-  image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
-  },
+    justifyContent: "center",
+    opacity: 0.8
+  }
+  
 });

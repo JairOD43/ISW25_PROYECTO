@@ -1,38 +1,55 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View} from "react-native";
-
-import Button from './components/Button'; 
-import ImageViewer from './components/ImageViewer';
-
-const PlaceholderImage = require("./assets/images/background-image.png");
-
+import {Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image} from 'react-native';
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <ImageViewer placeholderImageSource={PlaceholderImage} />
+    <Wrapper>
+      <Header/>
+      <View style={styles.container}>
+        <Text>Sin etiqueta</Text>
+
       </View>
-      <View style={styles.footerContainer}>
-        <Button label="Choose a photo" />
-        <Button label="Use this photo" />
-      </View>
-      <StatusBar style="auto" />
-    </View>
+    </Wrapper>
+     
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#fff',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
+  title: {
+    fontSize:70,
+    color: '#000',
+    fontWeight: 'bold'
   },
-  footerContainer: {
-    flex: 1 / 3,
-    alignItems: 'center',
+  subtitle: {
+    fontSize: 20,
+    color: 'gray',
+    fontWeight: 'condenseBold'
+
   },
+  TextInput:{
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 10,
+    width: '80%',
+    height: 50,
+    marginTop: 20,
+    borderRadius:30,
+    backgroundColor: '#fff',
+    
+  },
+  image: 
+  {
+    width: '100%',
+    height: '100%',
+    alignContent: 'center',
+    justifyContent: 'center'
+  }
+
 });
