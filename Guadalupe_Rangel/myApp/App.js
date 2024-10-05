@@ -1,27 +1,23 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, Text, TextInput,ImageBackground} from "react-native";
+import Wrapper from "./components/layout/Wrapper";
+import Header from "./components/layout/Header";
 
 import Button from './components/Button'; 
 import ImageViewer from './components/ImageViewer'; 
 
-const image = require("./assets/prueba.jpg"); // Asegúrate de que este sea el nombre correcto de tu imagen.
+const image = require("./assets/prueba.jpg"); 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-        <Text style= {styles.title}>WELCOME</Text>
-        <Text style= {styles.subtitle}>Sing in to your account</Text>
-        <TextInput placeholder="aaa@xxx.com"/>
-        <TextInput placeholder="password"/>
-        <TextInput placeholder="numero telefonico"/>
-        <View style={styles.footerContainer}>
-          <Button label="Registrarse" />
-      
+    <Wrapper>
+      <Header>
+        <View style={styles.container}>
+          <Text>Sin etiqueta</Text>
         </View>
-        <StatusBar style="auto" />
-      </ImageBackground>
-    </View>
+      </Header>
+    </Wrapper>
+    
   );
 }
 
