@@ -1,33 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, ImageBackground} from "react-native";
+import {StyleSheet, Text, View, } from "react-native";
 
-// import Button from './components/Button';
-
-const image = require("./assets/images/Fondo.jpg");
+import Wrapper from "./components/layout/Wrapper";
+import Header from "./components/layout/Header";
 
 export default function App() {
-  return (
-
-    <ImageBackground source={image} style={styles.image}>
-      <View style={styles.container}>
-        
-          <Text style={styles.title}>TecnoSale</Text>
-          <Text style={styles.subtitle}>Pagina de compras</Text>
-
-          <TextInput style={styles.textImput} placeholder="Nombre"></TextInput>
-          <TextInput style={styles.textImput} placeholder="Apellido"></TextInput>
-          <TextInput style={styles.textImput} placeholder="Telefono"></TextInput>
-
-          {/* <Button onPress= {()=>console.log("Hola mundo")} Title='boton 1'/> */}
-
-          <TouchableOpacity>
-            <Text style={{padding: 10, paddingLeft:30, paddingRight:30, marginTop: 20, color: '#fff', backgroundColor: 'purple'}}>Registrarse</Text>
-          </TouchableOpacity>
-
-          <StatusBar style="auto" />
-        
+  return ( 
+    <Wrapper>
+      <Header/>
+      <View styles = {styles.container}>
+        <Text>Hola mundo</Text>
       </View>
-    </ImageBackground>
+    </Wrapper>
   );
 }
 
@@ -63,14 +46,5 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 20,
   },
-
-  // imageContainer: {
-  //   flex: 1,
-  //   paddingTop: 58,
-  // },
-  // footerContainer: {
-  //   flex: 1 / 3,
-  //   alignItems: 'center',
-  // },
 
 });
