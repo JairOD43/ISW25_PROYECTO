@@ -1,20 +1,53 @@
-import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+
+import { ImageBackground, Pressable, StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 
 const image = { uri: "https://statics.eleconomista.com.ar/2021/09/crop/614e5c0185278__420x280.webp" };
 
 export default function App() {
+  const [text, onChangeText] = React.useState('Useless Text');
+  const [number, onChangeNumber] = React.useState('');
   return (
   <View style={styles.container}>
   
     <ImageBackground source={image} style={styles.image}>
-      <Text style={styles.text}>jair</Text>
-      <Text style={styles.text}>in Front of</Text>
-      <Text style={styles.text}>Background</Text>
+      <Text style={styles.text}>WELCOME</Text>
+      <Text style={styles.text2}>sign in to your account</Text>
+
+    <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Nombre"
+        keyboardType="text"
+      />
+    <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Apellido"
+        keyboardType="numeric"
+
+      />
+    <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Telefono"
+        keyboardType="numeric"
+
+      />
+      <Button style={styles.buttowwn}
+        onPress={()=>console.log("Mi mensaje uno")}
+        title = "Registrarte"
+      />
+      <TouchableOpacity onPress={()=> console.log("Mi mensaje uno")} >
+        <Text style={{ padding:10, color:"black", fontSize:30}}>touchable</Text>
+      </TouchableOpacity>
+
     </ImageBackground>
 
-    <Pressable style={styles.buttowwn}>
-      <Text style={styles.text}>{"presioname"}</Text>
-    </Pressable>
+
   </View>
   );
 }
@@ -31,18 +64,30 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 42,
+    fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
     backgroundColor: '#000000a0',
   },
   buttowwn: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
-  }
+    width: "50%"
+    
+  },
+  text2: {
+    color: 'red',
+    fontSize: 32,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: '#fff',
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderWidth: 1.5,
+    borderColor: "red",
+    borderRadius:30
+
+  },
 });
