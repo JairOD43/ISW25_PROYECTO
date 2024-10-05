@@ -1,38 +1,50 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View} from "react-native";
+import {StyleSheet, Text, View, } from "react-native";
 
-import Button from './components/Button'; 
-import ImageViewer from './components/ImageViewer';
-
-const PlaceholderImage = require("./assets/images/background-image.png");
+import Wrapper from "./components/layout/Wrapper";
+import Header from "./components/layout/Header";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <ImageViewer placeholderImageSource={PlaceholderImage} />
+  return ( 
+    <Wrapper>
+      <Header/>
+      <View styles = {styles.container}>
+        <Text>Hola mundo</Text>
       </View>
-      <View style={styles.footerContainer}>
-        <Button label="Choose a photo" />
-        <Button label="Use this photo" />
-      </View>
-      <StatusBar style="auto" />
-    </View>
+    </Wrapper>
   );
 }
 
 const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
+  title: {
+    fontSize: 70,
+    color: '#fff',
+    fontWeight: 'bold',
   },
-  footerContainer: {
-    flex: 1 / 3,
-    alignItems: 'center',
+  subtitle: {
+    fontSize: 30,
+    color: '#fff',
+    fontWeight: 'condensedBold',
   },
+  textImput: {
+    borderWidth: 1.5,
+    borderRadius: 10,
+    borderColor: 'purple',
+    padding: 10,
+    paddingStart: 30,
+    width: "80%",
+    height: 50,
+    marginTop: 20,
+  },
+
 });
