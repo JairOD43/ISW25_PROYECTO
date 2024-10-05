@@ -1,25 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
 
-const PlaceholderImage = require('./assets/imagenes/animePrimerImagen.jpg');
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
+// const PlaceholderImage = require('./assets/imagenes/animePrimerImagen.jpg');
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
+    <Wrapper>
+      <Header/>
+      <View style={styles.container}>
+        <Text>Sin Etiqueta</Text>
       </View>
-
-      <Text style={styles.title} >Welcome</Text>
-      <Text style={styles.subtitle}>Sign in to your account</Text>
-      <TextInput style={styles.textInput} placeholder="Nombre" />
-      <TextInput style={styles.textInput} placeholder="Apellido" />
-      <TextInput style={styles.textInput} placeholder="Telefono" />
-      <Button onPress={()=>console.log('Mi mensaje uno')} title="REGISTRAR"/>
-
-      <StatusBar style="auto" />
-
-    </View>
+    </Wrapper>
   );
 }
 
