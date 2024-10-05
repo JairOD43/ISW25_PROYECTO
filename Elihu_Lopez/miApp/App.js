@@ -1,55 +1,72 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image, Pressable, Text } from 'react-native';
+import { StyleSheet, View, Image, Pressable, Text, TextInput, Button, TouchableOpacity, ImageBackground } from 'react-native';
 
 const PlaceholderImage = require('./assets/images/montefuji.jpg');
 
-export default function App() {
+export default function App() 
+{
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
+    <ImageBackground
+      source={{uri:'https://i.pinimg.com/736x/89/f1/64/89f16427098d3a0e757045b521144bac.jpg'}}
+      style={styles.fondo}
+      >
+      <View style={styles.container}>
+        <Text style={styles.title}>WELCOME</Text>
+        <Text style={styles.subtitle}>Sign in to your account</Text>
+        <TextInput style={styles.text_input} placeholder='Nombre'/>
+        <TextInput style={styles.text_input} placeholder='Apellido'/>
+        <TextInput style={styles.text_input} placeholder='Telefono'/>
+        <StatusBar style='auto'/>
+
+        <TouchableOpacity onPress={()=>console.log('Bienvenidooo')}>
+          <Text style={{padding: 10, color: 'white',fontSize:15,backgroundColor:'gray',marginTop:20, borderRadius: 10}}>Register</Text>
+        </TouchableOpacity>
       </View>
-
-      <Pressable style={styles.button} onPress={() => alert('¡Botón presionado!')}>
-        <Text style={styles.buttonLabel}>Presionaaaaaa</Text>
-      </Pressable>
-
-      <Pressable style={styles.button} onPress={() => alert('!Saliste!')}>
-        <Text style={styles.buttonLabel}>Salir</Text>
-      </Pressable>
-
-      <StatusBar style="auto" />
-    </View>
+    </ImageBackground>
   );
 }
-
+//Nose que hice ayudaaaaaaaa
 const styles = StyleSheet.create({
-  container: {
+  container: 
+  {
     flex: 1,
-    backgroundColor: '#25292e',
     alignItems: 'center',
+    justifyContent: "center",
   },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
-    justifyContent: 'center', // Centrar la imagen
+
+  title:
+  {
+    fontSize: 25,
+    color:"black",
+    fontWeight: "bold"
   },
-  image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
+
+  subtitle:
+  {
+    fontSize:20,
+    color:'gray',
+    fontWeight: "bold"
   },
-  // Estilos para el botón
-  button: {
-    backgroundColor: 'white',
+
+  text_input:
+  {
+    borderWidth: 2,
+    borderColor: 'purple',
+    borderRadius: 30,
     padding: 10,
-    borderRadius: 5,
-    marginBottom: 30, // Un poco de espacio debajo del botón
+    width: "75%",
+    height: "auto",
+    marginTop:20,
   },
-  buttonLabel: {
-    color: 'black',
-    fontSize: 16,
-  },
+
+  fondo:
+  {
+    flex:1,
+    resizeMode: 'cover',
+    justifyContent: "center",
+  }
+  
+
 });
 
 
