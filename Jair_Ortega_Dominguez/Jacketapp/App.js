@@ -1,27 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, Button, TouchableOpacity } from 'react-native';
-
-const PlaceholderImage = { uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJC1JDEqBO6jXfLU-gufSgj5UAYz_w3tFKw&s' }; 
+import { StyleSheet, Text, View, style} from 'react-native';
+import Wrapper from './components/Layout/Wrapper';
+import Header from './components/Layout/Header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Image source={PlaceholderImage} style={styles.image} />
-      <View style={styles.overlay}>
-        <Text style={styles.title}>Jacketapp</Text>
-        <Text style={styles.title}>texto de prueba</Text>
-        <TextInput placeholder="Correo" style={styles.textInput} />
-        <TextInput placeholder="Contraseña" style={styles.textInput} secureTextEntry />
-        <Button
-          onPress={() => console.log('Inicio')} 
-          title="boton 1"
-        />
-        <TouchableOpacity onPress={() => console.log('cargando')}>
-          <Text style={styles.buttonText}>iniciar</Text>
-        </TouchableOpacity>
-      </View>
-      <StatusBar style="auto" />
-    </View>
+    <Wrapper>
+      <Header/>
+        <View style={styles.container}>
+          <Text>sin etiqueta</Text>
+        </View>
+    </Wrapper>
+    
   );
 }
 
@@ -59,8 +48,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 30,
   },
-  buttonText: {
-    color: 'white',
-    marginTop: 10,
-  },
+  
 });
