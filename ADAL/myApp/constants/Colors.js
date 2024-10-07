@@ -5,5 +5,5 @@ export default{
     jet:'#353535',
     oldSilver:'#8338485',
     platinum:'#666666',
-    withe:'#FFF',
+    white:'#FFF',
 };
