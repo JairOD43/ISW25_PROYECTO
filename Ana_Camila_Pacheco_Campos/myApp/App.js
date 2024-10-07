@@ -1,28 +1,16 @@
 import { StatusBar } from "expo-status-bar";
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, mageBackground, ImageBackground} from "react-native";
-const image = { uri: "https://docs.expo.dev/static/images/tutorial/background-images.png" }
-
+import {Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image} from 'react-native';
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
 export default function App() {
   return (
+    <Wrapper>
+      <Header/>
+      <View style={styles.container}>
+        <Text>Sin etiqueta</Text>
 
-    
-       <View style={styles.container}>
-        <ImageBackground style={styles.image} source={{uri: "https://i.pinimg.com/736x/09/cd/37/09cd3751f9e59f3bc82b982059e7b1c8.jpg"}}>
-      <Text style={styles.title}>SOMEBODY</Text>
-      <Text style={styles.subtitle}>SEVEN</Text>
-      <TextInput style={styles.TextInput} placeholder="Nombre y apellido"/>
-      <TextInput style={styles.TextInput} placeholder="Telefono" />
-
-      <StatusBar style= "auto" />
-      <TouchableOpacity onPress={()=>console.log('Mi mensaje dos')}>
-        <Text style={{padding:10, color:'white', fontSize:30, backgroundColor:'black'}}>Registrar</Text>
-
-      </TouchableOpacity>
-      </ImageBackground>
       </View>
-
-
-   
+    </Wrapper>
      
   );
 }
