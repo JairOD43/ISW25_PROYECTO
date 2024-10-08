@@ -1,5 +1,5 @@
 export default{
-    fmaily:{
+    family:{
         light:'Montserrat_200ExtraLight',
         regular: 'Montserrat_400Regular',
         bold:'Montserrat_700Bold'

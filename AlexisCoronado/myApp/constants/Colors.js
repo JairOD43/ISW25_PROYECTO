@@ -4,7 +4,7 @@ export default{
     jet: '#353535',
     oldSilver: '#838485',
     platinum: '#666666',
-    white: '#FFF',
     cream:'#FFF0D1',
-    coffe1: '#795757',
+    coff1: '#795757',
+    white: '#fff',
 }
