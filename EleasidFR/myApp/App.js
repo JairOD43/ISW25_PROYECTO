@@ -1,31 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
-
-const PlaceholderImage = require ('./assets/Images/GoogleWallpapers.jpeg');
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
+//const PlaceholderImage = require ('./assets/Images/GoogleWallpapers.jpeg');
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage}/>
+    <Wrapper>
+      <Header/>
+      <View style={styles.container}>
+        <Text>Sin Etiqueta</Text>
       </View>
-      <Text style={styles.title} >Welcome</Text>
-      <Text style={styles.subtitle}>Sign in to your account</Text>
-      <TextInput style={styles.textInput} placeholder="Nombre" />
-      <TextInput style={styles.textInput} placeholder="Apellido" />
-      <TextInput style={styles.textInput} placeholder="Telefono" />
-      <Button onPress={()=>console.log('Mi mensaje uno')} title="REGISTRAR"/>
-      <StatusBar style="auto" />
-    </View>
+    </Wrapper>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 80,
@@ -51,9 +47,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    //width: 360 por si las moscas 
-    justifyContent: 'center',
-    height: '100%',
+    width: 360,
+    height: 810,
     borderRadius: 18,
   }
 });

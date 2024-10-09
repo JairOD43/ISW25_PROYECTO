@@ -1,37 +1,55 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ImageBackground, Button } from 'react-native';
-import React from 'react';
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
+
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
+// const PlaceholderImage = require('./assets/imagenes/animePrimerImagen.jpg');
 
 export default function App() {
   return (
-    <ImageBackground
-      source={{ uri: 'https://images2.alphacoders.com/602/602223.jpg' }}
-      style={styles.background}
-      resizeMode="cover"
-    >
+    <Wrapper>
+      <Header/>
       <View style={styles.container}>
-        <Text style={{ color: '#fff', textAlign: 'center', marginBottom: 20 }}>
-          Open up App.js welcome to my App!
-        </Text>
-        <Button
-          title="Boton"
-          onPress={() => alert('Button pressed!')}
-        />
-        <StatusBar style="auto" />
+        <Text>Sin Etiqueta</Text>
       </View>
-    </ImageBackground>
+    </Wrapper>
   );
 }
 
+
 const styles = StyleSheet.create({
-  background: {
-    flex: 1, 
-    justifyContent: 'center',
-    alignItems: 'center', 
-  },
   container: {
-    backgroundColor: 'rgba(37, 41, 46, 0.7)', 
-    padding: 20,
-    borderRadius: 10, 
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
+  title: {
+    fontSize: 80,
+    color: "#000",
+    fontWeight: "bold"
+  },
+  subtitle: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "condensedBold"
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: "gray",
+    padding: 10,
+    width: "80%",
+    height: 50,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: "white",
+  },
+  imageContainer: {
+    flex: 1,
+  },
+  image: {
+    width: 360,
+    height: 810,
+    borderRadius: 18,
+  }
 });

@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image, Button, Text, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
-
+import Wrapper from "./components/layout/Wrapper";
+import Header from "./components/layout/Header";
 const PlaceholderImage = require('./assets/background.jpg');
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
     alert('Cuenta no encontrada');
   };
   return (
-    <View style={styles.container}>
+    /*<View style={styles.container}>
       <ImageBackground source={PlaceholderImage} resizeMode="cover" style={styles.image}>
         <Text style={styles.title}>Bienvenido</Text>
         <Text style={styles.subtitle}>Registrarme</Text>
@@ -20,7 +21,15 @@ export default function App() {
           <Text style={{padding:10, color:"#000", fontSize: 17, backgroundColor: "#c5cac4", marginTop:20, width: "30%"}}>Registrarme</Text>
         </TouchableOpacity>
       </ImageBackground>
-    </View>
+    </View>*/
+
+    <Wrapper>
+      <Header/>
+      <View style={styles.container}>
+        <Text>Sin eqtiqueta</Text>  
+      </View>  
+    </Wrapper>
+
   );
 }
 
