@@ -7,4 +7,4 @@ export default{
     platinum: '#666666',
     white: '#FFF',
 
-}
+};
