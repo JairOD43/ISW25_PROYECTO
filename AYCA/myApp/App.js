@@ -4,14 +4,18 @@ import {
   Text,
   View,
 } from "react-native";
+import FormItem from './components/controls/FormItem';
 import Wrapper from "./components/layout/Wrapper";
 import Header from "./components/layout/Header";
 export default function App() {
   return (
     <Wrapper>
-      <Header/>
+      <Header title="Componentes Base"/>
       <View style={styles.container}>
         <Text>Sin etiqueta</Text>
+        <FormItem/>
+        <Text>Con etiqueta</Text>
+        <FormItem label={"Correo electronico"}/>
         <StatusBar style="auto"/>
       </View>
     </Wrapper>
