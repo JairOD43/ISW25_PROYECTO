@@ -1,66 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Image, Pressable, Text } from 'react-native';
-
-const PlaceholderImage = require('./assets/images/background-image.png');
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View, Text,} from 'react-native';
+import  Wrapper  from "./components/layout/Wrapper";
+import  Header  from "./components/layout/Header";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={PlaceholderImage} style={styles.image} />
-      </View>
-      <StatusBar style="auto" />
-      
-      {/* Aquí renderizamos el componente Button */}
-      <Button label="Press Me" />
-    </View>
-  );
-}
+    <Wrapper>
+      <Header></Header>
 
-function Button({ label }) {
-  return (
-    <View style={styles.buttonContainer}>
-      <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-        <Text style={styles.buttonLabel}>{label}</Text>
-      </Pressable>
-    </View>
+      <View style={styles.container}>
+        <Text>Sin</Text>
+        <StatusBar style="auto"></StatusBar>
+      </View>
+    </Wrapper>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
-    alignItems: 'center',
-  },
-  imageContainer: {
-    flex: 1,
-    paddingTop: 58,
-  },
-  image: {
-    width: 320,
-    height: 440,
-    borderRadius: 18,
-  },
-  buttonContainer: {
-    width: 320,
-    height: 68,
-    marginHorizontal: 20,
+    backgroundColor: '#FFFFFF',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 3,
   },
-  button: {
-    borderRadius: 10,
-    width: '100%',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    backgroundColor: '#1E90FF',  
+  title:{
+    fontSize: 80,
+    color: '#000',
+    fontWeight:"bold",
   },
-  buttonLabel: {
-    color: '#fff',
-    fontSize: 16,
+  subtitle:{
+    fontSize: 20,
+    color: 'gray',
+    fontWeight: "condensedBold",
+  },
+  TextInput:{
+    padding:20,
+    paddingStart: 30,
+    width: "80%",
+    height: 50,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: '#FFFFFF',
   },
 });

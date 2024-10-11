@@ -1,20 +1,25 @@
-import { ImageBackground, StyleSheet, Text, TextInput,TouchableOpacity,  View } from 'react-native';
-
+import { StatusBar } from 'react-native';
+import{
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+}from "react-native";
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
 const image = { uri: "https://docs.expo.dev/static/images/tutorial/background-image.png" };
 
 export default function App() {
   return (
-  <View style={styles.container}>
-    <ImageBackground source={image} style={styles.image}>
-     
-      <TextInput style={styles.TextInput}placeholder='Nombres'/>
-      <TextInput style={styles.TextInput}placeholder='Telefono'/>
-    
-         <TouchableOpacity onPress={()=>console.log("Ha sido registrado")}>
-          <Text style={{padding:10, color:'white', fontSize:30,borderWidth: 1, marginTop: 40,borderRadius: 20, width: '50%', }}>Registrar</Text>
-         </TouchableOpacity>
-    </ImageBackground>
-  </View>
+  <Wrapper>
+    <Header/>
+    <View style={styles.container}>
+      <Text>Sin etiqueta</Text>
+      <StatusBar style="auto"/>
+    </View>
+  </Wrapper>
   );
 }
 
