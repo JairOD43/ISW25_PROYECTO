@@ -7,4 +7,5 @@ export default{
     white:'#FFF',
 
 
-}//Combinaciones de Colores para llamar (colors.js)
+};
+//Combinaciones de Colores para llamar (colors.js)

@@ -1,54 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, ImageBackground } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
 
-const PlaceholderImage = require('./assets/images/background-image.png');
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
+// const PlaceholderImage = require('./assets/imagenes/animePrimerImagen.jpg');
 
 export default function App() {
   return (
-    <ImageBackground source={PlaceholderImage} style={styles.background}>
+    <Wrapper>
+      <Header/>
       <View style={styles.container}>
-        <Text style={styles.title}>Welcome</Text>
-        <Text style={styles.subtitle}>Sign in to your account</Text>
-
-        <TextInput style={styles.textInput} placeholder="Nombres" />
-        <TextInput style={styles.textInput} placeholder="Apellidos" />
-        <TextInput style={styles.textInput} placeholder="aaa@xxx.com" />
-        <TextInput style={styles.textInput} placeholder="password" />
-        <Button onPress={() => console.log('Mi mensaje uno')} title="boton 1" />
-
-        <StatusBar style="auto" />
-
-        <TouchableOpacity onPress={() => console.log('Mi mensaje dos')} title="boton 1">
-          <Text style={styles.buttonText}>Boton 2</Text>
-        </TouchableOpacity>
+        <Text>Sin Etiqueta</Text>
       </View>
-    </ImageBackground>
+    </Wrapper>
   );
 }
 
+
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    justifyContent: 'center', 
-    alignItems: 'center', 
-  },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', 
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-    borderRadius: 10, 
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 80,
     color: "#000",
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   subtitle: {
     fontSize: 20,
-    color: "gray",
-    fontWeight: "600", // Peso de fuente fijo
+    color: "white",
+    fontWeight: "condensedBold"
   },
   textInput: {
     borderWidth: 1,
@@ -58,12 +42,14 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop: 20,
     borderRadius: 30,
-    backgroundColor: "#fff", // Fondo blanco
+    backgroundColor: "white",
   },
-  buttonText: {
-    padding: 10,
-    color: 'white',
-    fontSize: 30,
-    backgroundColor: "gray",
+  imageContainer: {
+    flex: 1,
   },
+  image: {
+    width: 360,
+    height: 810,
+    borderRadius: 18,
+  }
 });

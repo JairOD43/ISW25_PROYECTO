@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
 
 export default function App() {
   return (
@@ -33,6 +35,17 @@ export default function App() {
         </TouchableOpacity>
       </View>
     </ImageBackground>
+  );
+}
+
+export default function Wrapper({}) {
+  return (
+      <Wrapper>
+        <Header/>
+        <View>
+          <Text>Sin etiqueta</Text>
+        </View>
+      </Wrapper>
   );
 }
 
