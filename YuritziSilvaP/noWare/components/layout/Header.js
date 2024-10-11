@@ -4,7 +4,7 @@ import {Ionicons, EvilIcons} from '@expo/vector-icons';
 import colors from '../../constants/colors';
 import fonts from '../../constants/fonts';
 
-export default function Header({})
+export default function Header({title})
 {
     return(
     <View style={styles.container}> 
@@ -12,7 +12,7 @@ export default function Header({})
             <Ionicons name = "arrow-back-outline" size = {50} color="black"/>
         </TouchableOpacity>
         <View style={styles.logoContainer}> 
-            {<Text></Text>}
+            {title && <Text style = {styles.title}>{title}</Text>}
             <Image style= {styles.logo} source= {require('../../assets/icon.png')}/>
         </View>
         <TouchableOpacity>
