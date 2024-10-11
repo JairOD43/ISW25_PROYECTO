@@ -3,29 +3,21 @@ import { StyleSheet, View, Image, Pressable, Text, TextInput, Button, TouchableO
 
 const PlaceholderImage = require('./assets/images/montefuji.jpg');
 
+import Wrapper from './components/layout/Wrapper';
+import Header from './components/layout/Header';
+
 export default function App() 
 {
   return (
-    <ImageBackground
-      source={{uri:'https://i.pinimg.com/736x/89/f1/64/89f16427098d3a0e757045b521144bac.jpg'}}
-      style={styles.fondo}
-      >
+   <Wrapper>
+      <Header/>
       <View style={styles.container}>
-        <Text style={styles.title}>WELCOME</Text>
-        <Text style={styles.subtitle}>Sign in to your account</Text>
-        <TextInput style={styles.text_input} placeholder='Nombre'/>
-        <TextInput style={styles.text_input} placeholder='Apellido'/>
-        <TextInput style={styles.text_input} placeholder='Telefono'/>
-        <StatusBar style='auto'/>
-
-        <TouchableOpacity onPress={()=>console.log('Bienvenidooo')}>
-          <Text style={{padding: 10, color: 'white',fontSize:15,backgroundColor:'gray',marginTop:20, borderRadius: 10}}>Register</Text>
-        </TouchableOpacity>
+        <Text>Sin etiqueta</Text>
       </View>
-    </ImageBackground>
+   </Wrapper>
   );
 }
-//Nose que hice ayudaaaaaaaa
+//Nose que hice ayudaaaaaaa
 const styles = StyleSheet.create({
   container: 
   {
@@ -65,8 +57,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     justifyContent: "center",
   }
-  
-
 });
 
 

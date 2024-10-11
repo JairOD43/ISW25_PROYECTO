@@ -5,4 +5,4 @@ export default {
     oldSilver: '#838485',
     platinum: '#666666',
     white: '#FFF',
-}
+};
