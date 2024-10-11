@@ -1,13 +1,20 @@
 import { StyleSheet, Text, View, style} from 'react-native';
 import Wrapper from './components/Layout/Wrapper';
 import Header from './components/Layout/Header';
+import { StatusBar } from 'expo-status-bar';
+import FormItem from './components/controls/Formitem';
+
 
 export default function App() {
   return (
     <Wrapper>
-      <Header/>
+      <Header title="Componentes Bases"/>
         <View style={styles.container}>
           <Text>sin etiqueta</Text>
+          <FormItem/>
+          <Text>con etiqueta</Text>
+          <FormItem label={"Correo electronico"} />
+          <StatusBar style="auto"/>
         </View>
     </Wrapper>
     
@@ -19,6 +26,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#25292e',
     alignItems: 'center',
+    paddingHorizontal: 40,
+    justifyContent: "center",
   },
   image: {
     width: '100%',

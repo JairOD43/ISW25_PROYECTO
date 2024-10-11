@@ -3,14 +3,14 @@ import {Ionicons, EvilIcons} from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
 import Fonts from "../../constants/Fonts"; 
 
-export default function Header({}) {
+export default function Header({title}) {
 return( 
     <View style={styles.container}> 
         <TouchableOpacity>
             <Ionicons name="arrow-back-outline" size={50} color="black"></Ionicons>
         </TouchableOpacity>
         <View style={styles.logoContainer}>
-            {<Text></Text>}
+            {title && <Text style={styles.title}>{title}</Text>}
             <Image style={styles.logo} source={require ('../../assets/icon.png')}/>
         </View>
         <TouchableOpacity>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
       justifyContent: "center" ,
       paddingBottom: 30,
       paddingHorizintal: 30,
-      paddingTop: 30,
+      paddingTop: 50,
     },
     image: {
       width: '100%',
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
       paddingVertical: 5,
       fontSize: 80,
       color: Colors.platinum,
-      marginBotton: 10,
+      marginBotton: 5,
     },
     logo: {
-        height: 30,
-        width: 30,
+        height: 100,
+        width: 100,
     },
     logoContainer: {
         alignItems: 'center',
