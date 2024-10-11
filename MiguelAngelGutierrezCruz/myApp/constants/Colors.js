@@ -1,11 +1,10 @@
 export default{
-    cinnabar:'#f24236',
-    ghostWhiter:'',
-    jet:'',
-    oldSilver:'',
-    platinum:'',
-    white:'',
-    
+    cinnabar:'#F24236',
+    ghostWhite:'#F8FAFC',
+    jet:'#353535',
+    oldSilver:'#838485',
+    platinum:'#666666',
+    white:'#FFF',
 
 
-}
+};
