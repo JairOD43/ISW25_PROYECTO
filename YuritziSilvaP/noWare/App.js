@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import { 
   Button,
   StyleSheet,
@@ -6,16 +7,20 @@ import {
   TouchableOpacity, 
   View,
 } from 'react-native';
-
+import FormItem from './components/controls/Formitem';
 import Wrapper from './components/layout/wrapper';
 import Header from './components/layout/Header';
 
 export default function App() {
   return(
     <Wrapper>
-      <Header/>
-        <View style = {styles.container}>
+      <Header title="Componentes Base"/>
+        <View style={styles.container}>
           <Text>Sin etiqueta</Text>
+          <FormItem/>
+          <Text> Con etiqueta</Text>
+          <FormItem label={"Correo electronico"}/>
+          <StatusBar style="auto"/>
         </View>
     </Wrapper>
   );
@@ -26,6 +31,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   title:
   {
