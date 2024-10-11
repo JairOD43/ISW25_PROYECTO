@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingBottom: 30,
     paddingHorizontal: 30,
-    paddingTop: 30,
+    paddingTop: 50,
   },
   title: {
     backgroundColor: Colors.white,
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   logo: {
-    height: 30,
-    width: 30,
+    height: 100,
+    width: 100,
   },
   logoContainer: {
     alignItems: "center",

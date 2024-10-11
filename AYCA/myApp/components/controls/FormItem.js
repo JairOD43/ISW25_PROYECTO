@@ -19,12 +19,14 @@ const styles = StyleSheet.create({
       color: Colors.oldSilver,
       fontSize: Fonts.size.small,
       fontFamily: Fonts.family.regularm,
-      textAlign: 'center'
+      textAlign: 'left'
     },
     input: {
       borderBottomColor: Colors.cinnabar,
       borderBottomWidth: 3,
       color: Colors.jet,
       fontSize:Fonts.size.normal,
+      paddingBottom: 5,
+      paddingTop: 5,
     },
   });
